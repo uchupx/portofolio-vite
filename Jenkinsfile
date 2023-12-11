@@ -23,7 +23,7 @@ pipeline {
             deleteDir() /* clean up our workspace */
         }
         success {
-            echo 'I succeeeded!'
+            echo 'I succeeeded! bisa'
         }
         unstable {
             echo 'I am unstable :/'
