@@ -14,7 +14,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'node --version'
-                sh 'pwd'
+                echo "../${WORKSPACE}"
             }
         }
     }
