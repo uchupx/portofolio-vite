@@ -14,7 +14,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'node --version'
-                echo "../${WORKSPACE}"
+                sh "ssh -T -i ${JENKINS_HOME}/lightsail.pem ubuntu@18.136.22.66"
             }
         }
     }
