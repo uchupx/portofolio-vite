@@ -11,10 +11,9 @@ pipeline {
                 sh 'npm run build'
             }
         }
-        stage('Test') {
+        stage('Deploy') {
             steps {
-                sh 'node --version'
-                sh "ssh -T -i ${JENKINS_HOME}/light-sail.pem ubuntu@18.136.22.66"
+                sh "scp -i ${JENKINS_HOME}/light-sail.pem -r ./build ${LIGHTSAIL_USER}@${LIGHTSAIL_HOST}:/var/html/portofolio"
             }
         }
     }
