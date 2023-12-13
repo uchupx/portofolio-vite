@@ -37,6 +37,7 @@ export default defineComponent({
         <a href="https://www.instagram.com/uchupxx"><button type="button" class="px-4 mr-2 py-3 border hover:bg-white transition-all hover:text-black mt-2">Instagram</button></a>
         <a href="https://www.twitter.com/uchupx"><button type="button" class="px-4 mr-2 py-3 border hover:bg-white transition-all hover:text-black mt-2">Twitter</button></a>
         <a href="https://www.github.com/uchupx"><button type="button" class="px-4 mr-2 py-3 border hover:bg-white transition-all hover:text-black mt-2">Github</button></a>
+        <button type="button" class="px-4 mr-2 py-3 border hover:bg-white transition-all hover:text-black mt-2" @click="toRoute('blog')">Blogs</button>
         <!-- <button type="button" class="px-4 mr-2 py-3 border hover:bg-white transition-all hover:text-black mt-2">Github</button> -->
       </div>
     </div>
