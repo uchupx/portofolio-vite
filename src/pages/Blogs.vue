@@ -15,7 +15,7 @@ export default defineComponent({
       >>
     </div>
     <div class="border-b w-full py-3 mr-5">
-      <span class="leading-tight py-5 lg:text-5xl text-4xl">Works</span>
+      <span class="leading-tight py-5 lg:text-5xl text-4xl">Blogs</span>
     </div>
   </div>
   <div class="md:container mx-auto px-5 flex flex-row items-center gap-3 pt-10">
