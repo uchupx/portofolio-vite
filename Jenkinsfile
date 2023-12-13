@@ -13,6 +13,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+                sh "ls -a"
                 sh "scp -i ${JENKINS_HOME}/light-sail.pem -r ./build ${LIGHTSAIL_USER}@${LIGHTSAIL_HOST}:/var/www/html/portofolio"
             }
         }
