@@ -3,16 +3,25 @@
 </script>
 
 <template>
+  <navbar :hidden="$route.path == '/'" :name="$route.name"></navbar>
   <router-view></router-view>
 </template>
 
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import Navbar from "@/components/Navbar.vue";
+
 export default defineComponent({
   name: "App",
+  data() {
+    return {
+      name: "Yusuf Andriyanto",
+    };
+  },
   components: {
     // HelloWorld,
+    Navbar,
   },
 });
 </script>

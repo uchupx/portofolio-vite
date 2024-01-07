@@ -10,15 +10,16 @@ export default defineComponent({
 </script>
 
 <template>
+
   <div class="max-w-7xl mx-auto">
-    <div class="md:container mx-auto px-5 flex flex-row items-center pt-10">
+    <!-- <div class="md:container mx-auto px-5 flex flex-row items-center pt-10">
       <div class="text-white lg:text-4xl text-2xl lg:w-28 w-16 text-center">
         >>
       </div>
       <div class="border-b w-full py-3 mr-5">
         <span class="leading-tight py-5 lg:text-5xl text-4xl">Works</span>
       </div>
-    </div>
+    </div> -->
     <div class="md:container mx-auto px-5 flex flex-row items-center gap-3 pt-10">
       <div class="flex flex-row gap-3">
 
