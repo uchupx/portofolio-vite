@@ -9,8 +9,20 @@
 
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, nextTick } from "vue";
 import Navbar from "@/components/Navbar.vue";
+import router from "./routes";
+
+function title(string: String) {
+  string = string.replace("-", " ");
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+router.afterEach((to, from) => {
+  nextTick(() => {
+    document.title = title(to.name!.toString()) || "Home";
+  });
+});
 
 export default defineComponent({
   name: "App",

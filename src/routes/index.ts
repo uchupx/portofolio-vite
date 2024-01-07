@@ -1,6 +1,6 @@
 // You can pass in additional options here, but let's
 // keep it simple for now.
-import { createRouter, createWebHashHistory, createWebHistory, RouteRecordRaw} from 'vue-router'
+import { createRouter, createWebHistory, RouteRecordRaw} from 'vue-router'
 import Home from '../components/HelloWorld.vue'
 import Works from '../pages/Works.vue'
 import Blogs from '../pages/Blogs.vue'
