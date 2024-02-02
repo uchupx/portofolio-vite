@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <navbar :hidden="$route.path == '/'" :name?="$route.name"></navbar>
+  <navbar :hidden="$route.path == '/'" :name="$route.name?.toString()"></navbar>
   <router-view></router-view>
 </template>
 
