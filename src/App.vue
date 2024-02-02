@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import { defineComponent, nextTick } from "vue";
-import Navbar from "@/components/Navbar.vue";
+import Navbar from "./components/Navbar.vue";
 import router from "./routes";
 
 function title(string: String) {
