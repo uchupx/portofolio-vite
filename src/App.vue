@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <navbar :hidden="$route.path == '/'" :name="$route.name"></navbar>
+  <navbar :hidden="$route.path == '/'" :name?="$route.name"></navbar>
   <router-view></router-view>
 </template>
 
@@ -18,7 +18,7 @@ function title(string: String) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-router.afterEach((to, from) => {
+router.afterEach((to, _) => {
   nextTick(() => {
     document.title = title(to.name!.toString()) || "Home";
   });
