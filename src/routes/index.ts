@@ -4,6 +4,7 @@ import { createRouter, createWebHistory, RouteRecordRaw} from 'vue-router'
 import Home from '../components/HelloWorld.vue'
 import Works from '../pages/Works.vue'
 import Blogs from '../pages/Blogs.vue'
+import Experienece from '../pages/Experienece.vue'
 
 
 const routes: Array<RouteRecordRaw> = [
@@ -21,6 +22,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/blog",
     name: "blog",
     component: Blogs
+  },
+  {
+    path: "/experience",
+    name: "experience",
+    component: Experienece
   }
 ]
 const router = createRouter({

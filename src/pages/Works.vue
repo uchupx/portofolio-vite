@@ -33,6 +33,23 @@ export default defineComponent({
         <div class="flex flex-col gap-2 flex-wrap px-5">
           <div class="border border-dashed w-full p-3 hover:border-solid"
             @click="toRoute('https://github.com/uchupx/saceri-chatbot')">
+            > <span class="ml-2 font-bold">Kajian API</span> <br />
+            <span class="ml-5 font-light">Golang</span>
+            <div class="h-20 mt-2">
+              <p class="line-clamp-3 overflow-hidden">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+
+          <div class="border border-dashed w-full p-3 hover:border-solid"
+            @click="toRoute('https://github.com/uchupx/saceri-chatbot')">
             > <span class="ml-2 font-bold">Saceri Chatbot</span> <br />
             <span class="ml-5 font-light">Typescript</span>
             <div class="h-20 mt-2">

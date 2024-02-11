@@ -30,6 +30,7 @@ export default defineComponent({
     <div class="px-10">
       <p class="text-xl lg:text-5xl">Hello, I'm Yusuf a <span class="border-b cursor-default text-5xl leading-tight hover:text-blue-500 hover:transition-all hover:border-b-blue-600 hover:duration-300">Backend Developer</span></p>
       <br>>><button type="button" class="ml-4 py-2 border-b border-transparent hover:border-white transition-all" @click="toRoute('work')">See my works</button>
+      <br>>><button type="button" class="ml-4 py-2 border-b border-transparent hover:border-white transition-all" @click="toRoute('experience')">Experience</button>
       <br>>><a href="https://www.linkedin.com/in/yusuf-andriyanto-3a1a25278/"><button type="button" class="ml-4 py-2 border-b border-transparent hover:border-white transition-all text-blue-200">Connect with me on linkedin</button></a>
       <br> <span class="text-xs ml-9 text-gray-500"> Or follow me on </span>
       <!-- <br>>><button type="button" class="px-4 py-3 hover:border-b transition-all">See my works</button> -->
