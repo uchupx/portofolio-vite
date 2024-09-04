@@ -30,8 +30,8 @@ jobs:
         name: app-build
         path: build
     - run: ls -l 
-    - uses: actions/checkout@v4
-    - name: copy file via ssh password
+    - name: Copying to server
+    - run: ls -l build
       uses: appleboy/scp-action@v0.1.7
       with:
         host: ${{ secrets.HOST }}
