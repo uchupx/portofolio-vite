@@ -28,7 +28,7 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: app-build
-    - run: ls build 
+    - run: ls -l 
     - uses: actions/checkout@v4
     - name: copy file via ssh password
       uses: appleboy/scp-action@v0.1.7
