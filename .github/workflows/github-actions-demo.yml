@@ -31,7 +31,6 @@ jobs:
         path: build
     - run: ls -l 
     - name: Copying to server
-    - run: ls -l build
       uses: appleboy/scp-action@v0.1.7
       with:
         host: ${{ secrets.HOST }}
@@ -40,6 +39,7 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         source: "./build/*"
         target: "project/portofolio/" 
+    - run: ls -l build
     - name: SSH and do stuff
       uses: appleboy/ssh-action@master
       with:
