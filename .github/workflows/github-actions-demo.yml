@@ -50,4 +50,6 @@ jobs:
         script: |
             whoami
             ls -l project/portofolio
+            sudo rm -rf /var/www/portofolio
+            sudo mv project/portofolio/build /var/www/portofolio
 
