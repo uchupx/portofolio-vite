@@ -1,4 +1,5 @@
 <template>
+  <Analytics />
   <div class="font-mono bg-black text-green-500 min-h-screen">
     <!-- Header/Navigation -->
     <header class="border-b border-green-900 px-4 py-4">
@@ -268,6 +269,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import { Analytics } from '@vercel/analytics/vue';
 import { 
   Terminal, Menu, X, FolderOpen, Code, TerminalSquare, 
   Mail, Github, Linkedin, Twitter, ExternalLink 
