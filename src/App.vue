@@ -297,8 +297,22 @@ const projects = ref([
   {
     name: 'Kajian API <on_development>',
     description: 'A Event API for Kajian, a platform for searching nearby events.',
-    technologies: ['Go', 'Node.js', 'MySQL', 'Microservices'],
-    github: '#',
+    technologies: ['Node.js', 'MySQL', 'Microservices'],
+    github: 'https://github.com/uchupx/kajian-api-ts',
+    demo: '#'
+  },
+  {
+    name: 'Kajian Auth API <on_development>',
+    description: 'A Event API for Kajian, a platform for searching nearby events.',
+    technologies: ['Go',  'MySQL', 'Microservices'],
+    github: 'https://github.com/uchupx/kajian-auth',
+    demo: '#'
+  },
+  {
+    name: 'Sidewalk API',
+    description: 'A API for Sidewalk Mall.',
+    technologies: ['Go', 'Firebase', 'PostgreSQL'],
+    github: 'https://github.com/avatardev/sidewalk-be',
     demo: '#'
   },
 ]);
