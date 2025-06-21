@@ -83,7 +83,6 @@
   "name": "Yusuf Andriyanto",
   "location": "Bekasi, West Java, Indonesia",
   "interests": [
-    "Open Source",
     "Linux",
     "Algorithmic Problem Solving",
     "System Architecture"
@@ -108,10 +107,13 @@
             <div class="border-b border-green-900 p-4 flex justify-between items-center">
               <h3 class="font-bold text-white">{{ project.name }}</h3>
               <div class="flex space-x-2">
+                <a :href="project.docker_hub" v-if="project.docker_hub" target="_blank" rel="noopener" class="hover:text-white transition-colors">
+                  <Box class="h-5 w-5" />
+                </a>
                 <a :href="project.github" target="_blank" rel="noopener" class="hover:text-white transition-colors">
                   <Github class="h-5 w-5" />
                 </a>
-                <a :href="project.demo" target="_blank" rel="noopener" class="hover:text-white transition-colors">
+                <a :href="project.demo" v-if="project.demo" target="_blank" rel="noopener" class="hover:text-white transition-colors">
                   <ExternalLink class="h-5 w-5" />
                 </a>
               </div>
@@ -272,7 +274,7 @@ import { ref, onMounted } from 'vue';
 import { Analytics } from '@vercel/analytics/vue';
 import { 
   Terminal, Menu, X, FolderOpen, Code, TerminalSquare, 
-  Mail, Github, Linkedin, Twitter, ExternalLink 
+  Mail, Github, Linkedin, Twitter, ExternalLink, Box 
 } from 'lucide-vue-next';
 
 // Mobile menu toggle
@@ -299,22 +301,30 @@ const projects = ref([
     description: 'A Event API for Kajian, a platform for searching nearby events.',
     technologies: ['Node.js', 'MySQL', 'Microservices'],
     github: 'https://github.com/uchupx/kajian-api-ts',
-    demo: '#'
+    demo: null
   },
   {
     name: 'Kajian Auth API <on_development>',
     description: 'A Event API for Kajian, a platform for searching nearby events.',
     technologies: ['Go',  'MySQL', 'Microservices'],
     github: 'https://github.com/uchupx/kajian-auth',
-    demo: '#'
+    demo: null
   },
   {
     name: 'Sidewalk API',
-    description: 'A API for Sidewalk Mall.',
+    description: 'An API for Sidewalk Mall.',
     technologies: ['Go', 'Firebase', 'PostgreSQL'],
     github: 'https://github.com/avatardev/sidewalk-be',
-    demo: '#'
+    demo: null 
   },
+  {
+    name: 'Worker Shift - Auth',
+    description: 'Auth service for worker-shift API.',
+    technologies: ['TypeScript','MySQL','REST API', 'gRPC', 'Github Action'],
+    github: 'https://github.com/uchupx/worker-auth',
+    demo: null,
+    docker_hub: 'https://hub.docker.com/repository/docker/uchupxx/worker-auth/general'
+  }
 ]);
 
 // Skills data
