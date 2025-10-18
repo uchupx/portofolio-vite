@@ -11,9 +11,9 @@
 <script setup lang="ts">
 import {computed, reactive, watchEffect} from 'vue';
 import {useRoute} from 'vue-router';
-import Layout from "@/pages/admin/Layout.vue";
+import Layout from "./pages/admin/Layout.vue";
 
-const isAdmin = reactive({ value: false  });
+const isAdmin = reactive({value: false});
 
 const route = useRoute();
 
@@ -24,7 +24,7 @@ watchEffect(() => {
   isAdmin.value = false;
 
   if (meta?.adminOnly) {
-    isAdmin.value =  meta?.adminOnly;
+    isAdmin.value = meta?.adminOnly as boolean;
   }
 })
 </script>
@@ -58,5 +58,3 @@ html {
   background: #047857;
 }
 </style>
-<script setup lang="ts">
-</script>
