@@ -1,5 +1,5 @@
 <template>
-  <div class="font-mono mt-20 bg-black text-green-500 min-h-screen w-8/12 block mx-auto">
+  <div class="font-mono mt-20 bg-black text-green-500 min-h-screen md:w-8/12 w-9/12 block mx-auto">
     <!-- Hero Section -->
     <section class="py-20 px-4">
       <div class="container mx-auto">
