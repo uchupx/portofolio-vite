@@ -12,7 +12,16 @@
         <div class="order-1 rounded-lg w-5/12 px-6 py-4">
           <h3 class="mb-1 font-bold text-white text-xl">Detikcom - Web Developer</h3>
           <span class="text-md">(Nov 2023 - Current)</span>
-          <p class="text-sm leading-snug tracking-wide text-white text-opacity-100"></p>
+          <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">
+            Working as a Web Developer focusing on developing and maintaining web applications with modern technologies.
+            <br>
+            <br>
+            - Develop and maintain web applications using modern JavaScript frameworks<br>
+            - Collaborate with cross-functional teams to deliver high-quality software solutions<br>
+            - Optimize application performance and ensure responsive design<br>
+            - Implement new features and functionality based on business requirements<br>
+            - Participate in code reviews and maintain coding standards<br>
+          </p>
         </div>
       </div>
 
