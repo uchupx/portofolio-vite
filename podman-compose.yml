@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runner
+    image: portofolio-vite:latest
+    container_name: portofolio-vite
+    ports:
+      - "4173:4173"
+    environment:
+      - PORT=4173
+    # Low resource limits — static file serving is extremely cheap
+    deploy:
+      resources:
+        limits:
+          cpus: "0.25"
+          memory: 64M
+        reservations:
+          cpus: "0.05"
+          memory: 32M
+    restart: unless-stopped
+    read_only: true          # filesystem read-only for security
+    tmpfs:
+      - /tmp                 # bun may need /tmp

@@ -1,18 +1,31 @@
-FROM node:20-alpine AS base
+# ── Base: alpine variant = smallest bun image ─────────────────────────────────
+FROM oven/bun:1-alpine AS base
 WORKDIR /app
 
+# ── Deps: install only prod+dev deps needed for build ─────────────────────────
 FROM base AS deps
-COPY package.json package-lock.json ./
-RUN npm install
+COPY package.json bun.lock ./
+RUN bun install --frozen-lockfile
 
+# ── Build: compile TypeScript + bundle assets ─────────────────────────────────
 FROM base AS build
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-RUN npm run build
+RUN bun run build
 
-FROM nginx:alpine AS runner
-COPY --from=build /app/build /usr/share/nginx/html
+# ── Runner: only bun binary + static files + tiny serve script ────────────────
+# No node_modules, no vite, no dev tools → very small final image
+FROM oven/bun:1-alpine AS runner
+WORKDIR /app
 
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+COPY --from=build /app/build ./build
+COPY serve.ts ./
 
+# Run as non-root for security / lower attack surface
+RUN addgroup -S app && adduser -S app -G app
+USER app
+
+EXPOSE 4173
+ENV PORT=4173
+
+CMD ["bun", "run", "serve.ts"]
